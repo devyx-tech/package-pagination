@@ -1,6 +1,6 @@
 {
-  "name": "jpmelo-package-pagination",
-  "version": "1.0.1",
+  "name": "nestjs-pagination-devyx",
+  "version": "1.0.0",
   "description": "custom pagination",
   "main": "dist/index",
   "types": "dist/index",
