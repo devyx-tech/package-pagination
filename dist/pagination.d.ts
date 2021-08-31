@@ -1,6 +1,6 @@
 import { IPaginationOptions, Pagination } from 'nestjs-typeorm-paginate';
 import { Observable } from 'rxjs';
-import { Repository } from 'typeorm';
+import { Repository, ObjectLiteral } from 'typeorm';
 import { FindManyOptions } from 'typeorm/find-options/FindManyOptions';
-export default function pagination(options: IPaginationOptions, repo: Repository<any>, findOptions: FindManyOptions): Promise<Observable<Pagination<any>>>;
+export default function pagination<Entity extends ObjectLiteral>(options: IPaginationOptions, repo: Repository<Entity>, findOptions: FindManyOptions): Promise<Observable<Pagination<Entity>>>;
 //# sourceMappingURL=pagination.d.ts.map

@@ -1,13 +1,13 @@
 import { IPaginationOptions, Pagination } from 'nestjs-typeorm-paginate';
 import { from, map, Observable } from 'rxjs';
-import { Repository } from 'typeorm';
+import {Repository, ObjectLiteral} from 'typeorm';
 import { FindManyOptions } from 'typeorm/find-options/FindManyOptions';
 
-export default async function pagination(
+export default async function pagination<Entity extends ObjectLiteral>(
   options: IPaginationOptions,
-  repo: Repository<any>,
+  repo: Repository<Entity>,
   findOptions: FindManyOptions,
-): Promise<Observable<Pagination<any>>> {
+): Promise<Observable<Pagination<Entity>>> {
   return from(repo.findAndCount(findOptions)).pipe(
     map(([registers, totalRegisters]) => {
       function regex(phrase: string, limit: number, position: number) {
