@@ -8,4 +8,4 @@ services:
     volumes:
       - .:/node
     ports:
-      - "3000:3000"
+      - "3225:3000"

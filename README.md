@@ -62,9 +62,9 @@ export class CatRepository {
         "last": "localhost:3333/cats?&page=0&limit=5"
     },
     "meta": {
-        "currentPage": 1,
+        "page": 1,
         "itemCount": 2,
-        "itemsPerPage": 5,
+        "limit": 5,
         "totalItems": 2,
         "totalPages": 1
     }
